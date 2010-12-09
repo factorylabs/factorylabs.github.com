@@ -13,7 +13,9 @@ author: Alex Welch
 
 some ruby code:
 
+    {% highlight ruby %}
     1.upto(4).each { puts "hello" }
+    {% endhighlight %}
 
 some javascript code:
 
