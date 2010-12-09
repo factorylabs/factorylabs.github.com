@@ -6,6 +6,7 @@ body {
   font-family: Helvetica, "Helvetica", Arial, Sans-serif;
   font-size: 14px;
   color: #333;
+  background: #dfdfdf;
 }
 a { color: #555; }
 a:hover { color: #f78f1e; }
@@ -57,13 +58,13 @@ div#header {
 div#main {
   border-bottom: #bbc4cc 1px solid;
   border-top: #222 4px solid;
-  margin-bottom: 1px;
-  padding: 30px;
+  background-color: #fff;
+  padding: 30px 0 50px;
 }
 
 div#footer {
-  background: #dfdfdf;
   color: #444;
+  border-top: #fff 1px solid;
 }
 #footer ul {
   float: left;
@@ -80,4 +81,16 @@ div#footer {
   font-size: 12px;
   padding: 10px;
   text-align: center;
+}
+
+/* post layout */
+
+.post h1 {
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: .05em;
+}
+.post div.content {
+  line-height: 18px;
+  padding: 20px 0;
 }
