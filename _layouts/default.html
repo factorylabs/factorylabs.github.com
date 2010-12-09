@@ -4,6 +4,7 @@
   <head>
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" media="screen" charset="utf-8" />
   </head>
   <body>
     <div id="header">
@@ -12,7 +13,7 @@
         <ul>
           <li class="{% if page.section == 'home' %}current{% endif %}"><a href="/">Home</a></li>
           <li class="{% if page.section == 'about' %}current{% endif %}"><a href="#">About</a></li>
-          <li class="{% if page.section == 'blog' %}current{% endif %}"><a href="#">Blog</a></li>
+          <li class="{% if page.section == 'blog' %}current{% endif %}"><a href="/blog.html">Blog</a></li>
           <li class="{% if page.section == 'community' %}current{% endif %}"><a href="#">Community</a></li>
         </ul>
       </div>

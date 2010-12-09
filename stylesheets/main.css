@@ -8,6 +8,17 @@ body {
   color: #333;
   background: #dfdfdf;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1em;
+}
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
 a { color: #555; }
 a:hover { color: #f78f1e; }
 
@@ -85,12 +96,26 @@ div#footer {
 
 /* post layout */
 
-.post h1 {
-  font-size: 20px;
+#posts div.post {
+  margin-bottom: 60px;
+}
+.post h1.title {
+  font-size: 24px;
   font-weight: normal;
   letter-spacing: .05em;
+  border-bottom: #eee 1px solid;
+  padding-bottom: 5px;
+}
+
+.post p {
+  margin: 1em 0;
+  line-height: 20px;
 }
 .post div.content {
   line-height: 18px;
-  padding: 20px 0;
+  padding: 0 0 20px;
+}
+.post div.meta {
+  background: #eee;
+  padding: 10px;
 }
