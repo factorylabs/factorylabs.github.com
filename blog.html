@@ -1,0 +1,20 @@
+---
+title: Blog
+layout: default
+section: blog
+---
+
+<div id="posts">
+  {% for post in site.posts %}
+
+    <div class="post">
+      <h1 class="title">{{post.title}}</h1>
+      <div class="content">{{post.content}}</div>
+      <div class="meta">
+        author: {{post.author}}
+        date: {{ post.date | date_to_string }}
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
