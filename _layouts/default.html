@@ -10,10 +10,10 @@
       <div class="inner">
         <h1>f/ interactive</h1>
         <ul>
-          <li class="current"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Community</a></li>
+          <li class="{% if page.section == 'home' %}current{% endif %}"><a href="/">Home</a></li>
+          <li class="{% if page.section == 'about' %}current{% endif %}"><a href="#">About</a></li>
+          <li class="{% if page.section == 'blog' %}current{% endif %}"><a href="#">Blog</a></li>
+          <li class="{% if page.section == 'community' %}current{% endif %}"><a href="#">Community</a></li>
         </ul>
       </div>
     </div>
