@@ -1,8 +1,16 @@
 ---
 layout: post
-title: another test post
+title: Style Guide
 author: Alex Welch
+categories:
+- layout
+- test category
+- another cat
 ---
+
+Lorizzle ipsizzle dolizzle sit amizzle, consectetuer adipiscing yo mamma. Nullam sapien velizzle, its fo rizzle volutpizzle, suscipit for sure, brizzle vizzle, its fo rizzle. Pellentesque we gonna chung tortizzle. Sed eros. Stuff fizzle dolor dapibus turpizzle tempizzle shizznit. pellentesque nibh et turpizzle. Vestibulum izzle tortor. Gangsta mammasay mammasa mamma oo sa rhoncus fo shizzle. Izzle the bizzle habitasse bow wow wow dictumst. Dang dapibizzle. I'm in the shizzle we gonna chung urna, pretizzle eu, mattis mah nizzle, eleifend phat, nunc. Stuff suscipizzle. Integer sempizzle velit sizzle mofo.
+
+Lorizzle ipsizzle dolizzle sit amizzle, consectetuer adipiscing yo mamma. Nullam sapien velizzle, its fo rizzle volutpizzle, suscipit for sure, brizzle vizzle, its fo rizzle. Pellentesque we gonna chung tortizzle. Sed eros. Stuff fizzle dolor dapibus turpizzle tempizzle shizznit. pellentesque nibh et turpizzle. Vestibulum izzle tortor. Gangsta mammasay mammasa mamma oo sa rhoncus fo shizzle. Izzle the bizzle habitasse bow wow wow dictumst. Dang dapibizzle. I'm in the shizzle we gonna chung urna, pretizzle eu, mattis mah nizzle, eleifend phat, nunc. Stuff suscipizzle. Integer sempizzle velit sizzle mofo.
 
 #heading 1
 ## heading 2
@@ -11,16 +19,15 @@ author: Alex Welch
 ##### heading 5
 ###### heading 6
 
-some ruby code:
+some ruby code with highlighting:
 
-    {% highlight ruby %}
-    1.upto(4).each { puts "hello" }
-    {% endhighlight %}
+{% highlight ruby %}
+1.upto(4).each { puts "hello" }
+{% endhighlight %}
 
-some javascript code:
+some javascript code without highlighting - must be indented to be rendered as code:
 
     var myFunction = function(text) {
       alert(text);
     };
 
-Lorizzle ipsizzle dolizzle sit amizzle, consectetuer adipiscing yo mamma. Nullam sapien velizzle, its fo rizzle volutpizzle, suscipit for sure, brizzle vizzle, its fo rizzle. Pellentesque we gonna chung tortizzle. Sed eros. Stuff fizzle dolor dapibus turpizzle tempizzle shizznit. pellentesque nibh et turpizzle. Vestibulum izzle tortor. Gangsta mammasay mammasa mamma oo sa rhoncus fo shizzle. Izzle the bizzle habitasse bow wow wow dictumst. Dang dapibizzle. I'm in the shizzle we gonna chung urna, pretizzle eu, mattis mah nizzle, eleifend phat, nunc. Stuff suscipizzle. Integer sempizzle velit sizzle mofo.
