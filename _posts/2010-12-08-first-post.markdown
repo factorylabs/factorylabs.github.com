@@ -1,7 +1,7 @@
 ---
 layout: post
 title: this is my first post
-author: Alex Welch
+author: Alex Unknown
 ---
 
 ##my first post
