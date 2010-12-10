@@ -58,6 +58,9 @@ div#header {
   text-indent: -9999px;
   float: left;
 }
+#header h1 a {
+  display: block;
+}
 #header ul {
   float: right;
   margin-top: 20px;
