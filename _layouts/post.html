@@ -2,17 +2,8 @@
 layout: default
 section: blog
 ---
-<div id="post" class="post">
-  <h1 class="title"><a href="{{ page.url }}">{{page.title}}</a> <em>{{ page.date | date_to_string }}</em></h1>
-  <div class="content">{{content}}</div>
-  <p class="author">- {{ page.author }}</p>
-  <div class="meta">
-    <dl>
-      <dt>in:</dt>
-      <dd>{{ page.categories | array_to_sentence_string }}</dd>
-    </dl>
-  </div>
-</div>
+{% assign post = page %}
+{% include post.html %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

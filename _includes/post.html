@@ -1,0 +1,11 @@
+<div id="post" class="post">
+  <h1 class="title"><a href="{{ post.url }}">{{post.title}} <span>- view comments</span></a> <em>{{ post.date | date_to_string }}</em></h1>
+  <div class="content">{{ content }}</div>
+  <p class="author">- {{ post.author }}</p>
+  <div class="meta">
+    <dl>
+      <dt>in:</dt>
+      <dd>{{ post.categories | array_to_sentence_string }}</dd>
+    </dl>
+  </div>
+</div>
