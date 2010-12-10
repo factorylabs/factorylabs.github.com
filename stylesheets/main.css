@@ -37,8 +37,9 @@ code {
 /* misc/utility classes */
 
 .inner {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* layout */
@@ -76,10 +77,12 @@ div#header {
 #header ul li a:hover { color: #fff; }
 #header ul li.current a {
   background: #222;
-border-radius: 10px 10px 0px 0px;
--moz-border-radius: 10px 10px 0px 0px;
--webkit-border-bottom-right-radius: 0px;
--webkit-border-bottom-left-radius: 0px;
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
 }
 
 div#main {
@@ -118,16 +121,41 @@ div.post {
   margin: 60px 0 100px;
   border-bottom: #eee 5px solid;
 }
+.post img.avatar {
+  float: left;
+  margin: 0 20px 10px 0;
+  padding: 7px;
+  border: #eee 3px solid;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
 .post h1.title {
+  margin-left: 100px;
   font-size: 24px;
   font-weight: normal;
   letter-spacing: .05em;
   border-bottom: #eee 1px solid;
+  padding-top: 25px;
   padding-bottom: 5px;
+  margin-bottom: 39px;
   color: #444;
 }
 .post h1.title a {
   text-decoration: none;
+  position: relative;
+}
+.post h1.title span {
+  font-size: 15px;
+  font-style: italic;
+  color: #777;
+  position: absolute;
+  top: 6px;
+  right: -130px;
+  display: none;
+}
+.post h1.title a:hover span {
+  display: block;
 }
 .post h1.title em {
   float: right;
@@ -144,8 +172,12 @@ div.post {
   padding: 0 0 20px;
 }
 .post .author {
-  text-align: right;
+  margin-left: 100px;
+  font-size: 12px;
+  color: #555;
   font-style: italic;
+  font-weight: normal;
+  margin-top: -30px;
 }
 .post div.meta {
   padding: 10px 0;
