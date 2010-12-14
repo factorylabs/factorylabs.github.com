@@ -3,8 +3,8 @@ class String
     self.gsub(/\s+/, '-').downcase
   end
 end
-desc 'Generate tags page'
-namespace :tags do
+desc 'Generate categories page'
+namespace :categories do
   require 'rubygems'
   require 'jekyll'
   include Jekyll::Filters
@@ -13,48 +13,49 @@ namespace :tags do
   site = Jekyll::Site.new(options)
   site.read_posts('')
 
-  desc 'create an index page with a tag cloud'
+  desc 'create an index page with a list of categories'
   task  :make_index do
-    puts "Generating tag index page..."
+    puts "Generating category index page..."
 
     html = ""
     html << <<-HTML
 ---
 layout: default
-title: tags!!!
+title: Categories!
 section: blog
 ---
     HTML
-    html << "<div id='tags'>"
+    html << "<div id='categories'>"
     site.categories.sort.each do |category, posts|
       size = posts.length
-      html << "<a href='/tags/#{category.url_safe}.html'>#{category}(#{size})</a>"
+      html << "<a href='/categories/#{category.url_safe}.html'>#{category}(#{size})</a>"
     end
     html << "</div>"
-    File.open("tags.html", 'w+') do |file|
+    File.open("categories.html", 'w+') do |file|
       file.puts html
     end
   end
 
-  desc 'create individual tag pages'
+  desc 'create individual category pages'
   task :make_pages do
-    puts "Generating tag pages..."
+    puts "Generating category pages..."
 
     site.categories.sort.each do |category, posts|
       html = ''
       html << <<-HTML
 ---
 layout: default
-title: Postings tagged "#{category}"
+title: Postings categoriezed under: "#{category}"
 section: blog
 ---
       HTML
       html << '<div id="posts">'
       posts.reverse.each do |post|
+        content = post.content
         post_data = post.to_liquid
         template = Liquid::Template.parse File.read('_includes/post.html')
         html << template.render( 
-          "content" => Maruku.new(post_data["content"]).to_html_document,
+          "content" => Maruku.new(content).to_html,
           "post" => { 
             "date" => post_data["date"],
             "url" => post.url,
@@ -66,7 +67,7 @@ section: blog
       end
       html << '</div>'
 
-      File.open("tags/#{category.url_safe}.html", 'w+') do |file|
+      File.open("categories/#{category.url_safe}.html", 'w+') do |file|
         file.puts html
       end
     end
