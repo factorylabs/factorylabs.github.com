@@ -2,6 +2,8 @@
 layout: post
 title: this is my first post
 author: Alex Unknown
+categories:
+- layout
 ---
 
 ##my first post
