@@ -1,0 +1,20 @@
+---
+title: Team
+layout: default
+section: about
+people:
+- name: Alex Welch
+  bio: Alex is a good guy
+  img: 'alex.jpg'
+- name: Jay Zeschin
+  bio: Jay is also a good guy
+  img: 'jay.jpg'
+---
+
+<div id="people">
+  {% for person in page.people %}
+  <div class="person">
+    <h2>name: {{person.name}}</h2>
+  </div>
+  {% endfor %}
+</div>
