@@ -1,0 +1,4 @@
+{% for category in site.categories %}
+{% assign cat = category[0] %}
+  <li>{% include category_link.html %}</li>
+{% endfor %}

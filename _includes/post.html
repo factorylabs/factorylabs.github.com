@@ -5,7 +5,9 @@
   <div class="meta">
     <dl>
       <dt>in:</dt>
-      <dd>{{ post.categories | array_to_sentence_string }}</dd>
+      {% for cat in post.categories %}
+        <dd>{% include category_link.html %}</dd>
+      {% endfor %}
     </dl>
   </div>
 </div>

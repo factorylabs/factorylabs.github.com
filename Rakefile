@@ -45,7 +45,7 @@ section: blog
       html << <<-HTML
 ---
 layout: default
-title: Postings categoriezed under: "#{category}"
+title: "postings categorized under #{category}"
 section: blog
 ---
       HTML

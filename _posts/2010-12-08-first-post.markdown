@@ -3,7 +3,7 @@ layout: post
 title: this is my first post
 author: Alex Unknown
 categories:
-- layout
+- General
 ---
 
 ##my first post
