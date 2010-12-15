@@ -23,6 +23,7 @@ namespace :categories do
 layout: default
 title: "postings categorized under #{category}"
 section: blog
+current_category: #{category}
 ---
       HTML
       html << '<div id="posts">'

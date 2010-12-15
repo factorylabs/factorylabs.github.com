@@ -1,1 +1,1 @@
-<a href="/categories/{{ cat | downcase | replace:' ','-' }}.html">{{cat}}</a>
+<a class="{% if page.current_category == cat %}current{% endif %}" href="/categories/{{ cat | downcase | replace:' ','-' }}.html">{{cat}}</a>

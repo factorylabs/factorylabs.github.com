@@ -115,6 +115,9 @@ div#main {
 #main .sub_nav ul li a:hover {
   color: #fff;
 }
+#main .sub_nav ul li a.current {
+  color: #f78f1e;
+}
 
 div#footer {
   color: #444;
