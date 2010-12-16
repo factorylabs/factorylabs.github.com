@@ -1,1 +1,2 @@
 <a class="{% if page.current_category == cat %}current{% endif %}" href="/categories/{{ cat | downcase | replace:' ','-' }}.html">{{cat}}</a>
+<a href="/categories/{{ cat | downcase | replace:' ','-' }}.xml" class="feed_link"><img src="/images/feed_icon.png" /></a>

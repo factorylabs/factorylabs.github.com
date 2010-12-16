@@ -42,6 +42,8 @@ code {
   padding: 0 20px;
 }
 
+a.feed_link { display: none; }
+
 /* layout */
 
 div#header {
@@ -128,10 +130,16 @@ div#footer {
   margin: 20px 60px 0 0;
 }
 #footer ul li a {
-  display: block;
   line-height: 24px;
   color: #444;
   text-decoration: none;
+}
+#footer ul li a.feed_link {
+  display: inline;
+  margin-left: 8px;
+}
+#footer ul li a.feed_link img {
+  width: 12px;
 }
 #footer ul li a:hover { color: #f78f1e; }
 

@@ -1,2 +1,5 @@
 pygments: true
 permalink: /:month-:day-:year/:title.html
+
+title: "F/ interactive"
+url: "http://factorylabs.github.com"
