@@ -25,6 +25,14 @@ some ruby code with highlighting:
 1.upto(4).each { puts "Hi there" }
 {% endhighlight %}
 
+with line numbers:
+
+{% highlight ruby linenos %}
+1.upto(4).each do
+  puts "Hi there" 
+end
+{% endhighlight %}
+
 some javascript code without highlighting - must be indented to be rendered as code:
 
     var myFunction = function(text) {
