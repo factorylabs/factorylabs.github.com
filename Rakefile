@@ -14,7 +14,6 @@ namespace :categories do
 
     options = Jekyll.configuration({})
     site = Jekyll::Site.new(options)
-    site.read_posts('')
 
     site.categories.sort.each do |category, posts|
       html = ''
@@ -27,21 +26,10 @@ current_category: #{category}
 ---
       HTML
       html << '<div id="posts">'
-      posts.reverse.each do |post|
-        content = post.content
-        post_data = post.to_liquid
-        template = Liquid::Template.parse File.read('_includes/post.html')
-        html << template.render( 
-          "content" => Maruku.new(content).to_html,
-          "post" => { 
-            "date" => post_data["date"],
-            "url" => post.url,
-            "title" => post_data["title"],
-            "author" => post_data["author"],
-            "categories" => post.categories
-          }
-        )
-      end
+        html << "{% for post in site.posts %}"
+        html << "{% assign content = post.content %}"
+        html << "{% include post.html %}"
+        html << "{% endfor %}"
       html << '</div>'
 
       File.open("categories/#{category.url_safe}.html", 'w+') do |file|
